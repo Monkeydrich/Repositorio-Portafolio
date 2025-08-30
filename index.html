@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio de Richard Palma</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: #282864;
+    color: #201f1f;
+  }
+
+  /* Header con fondo animado */
+  header {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 60px 20px 40px 20px;
+    overflow: hidden;
+  }
+
+  .header-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('estrellas.jpg') repeat;
+    background-size: cover;
+    z-index: -1;
+    animation: moverEstrellas 60s linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes moverEstrellas {
+    0% {background-position: 0 0;}
+    100% {background-position: 10000px 0;}
+  }
+
+  header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5em;
+  }
+
+  /* Sub-header con fondo negro y estrellas */
+  .sub-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .sub-header-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('estrellas.jpg') repeat;
+    background-size: cover;
+    z-index: -1;
+    animation: moverEstrellas 60s linear infinite;
+    opacity: 0.9;
+    background-color: black; /* para un fondo negro más sólido */
+  }
+
+  .sub-header p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  header nav {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  nav button {
+    background: #5c5cd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  nav button:hover {
+    background: #3f3fcf;
+    transform: scale(1.05);
+  }
+
+  /* Secciones */
+  section {
+    display: none;
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+
+  section h2 {
+    color: #333;
+  }
+
+  /* Proyectos */
+  .proyecto {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #5c5cd4;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .proyecto:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+  }
+
+  .proyecto a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5c5cd4;
+  }
+
+  .proyecto a:hover {
+    color: #3f3fcf;
+  }
+
+  /* Contacto */
+  #contacto div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #contacto img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #5c5cd4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Footer */
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav button {
+      width: 100%;
+      margin: 5px 0;
+    }
+    section {
+      padding: 20px;
+    }
+    #contacto div {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body onload="mostrar('sobre-mi')">
+
+<!-- Header con fondo animado -->
+<header>
+  <div class="header-fondo"></div>
+  <h1>Portafolio de Richard Palma</h1>
+
+  <!-- Sub-header -->
+  <div class="sub-header">
+    <div class="sub-header-fondo"></div>
+    <p>Bienvenido a mi portafolio personal</p>
+  </div>
+
+  <nav>
+    <button onclick="mostrar('sobre-mi')">Sobre mí</button>
+    <button onclick="mostrar('proyectos')">Proyectos</button>
+    <button onclick="mostrar('contacto')">Contacto</button>
+  </nav>
+</header>
+
+<!-- Secciones -->
+<section id="sobre-mi">
+  <h2>Sobre mí</h2>
+  <p>Edad: 20 años</p>
+  <p>Cumpleaños: 27/04</p>
+  <p>Ciudad de México</p>
+  <p>Hola 👋 Soy <strong>Richard Palma</strong>, desarrollador con experiencia en <strong>C, C++, HTML, Python básico, SQL, C# y soporte técnico</strong>. Me apasiona crear proyectos prácticos y aprender nuevas tecnologías.<strong> Soy un chico comprometido, proactivo y con capacidad de mejora</strong></p>
+  <p><strong>Educación:</strong></p>
+  <ul>
+    <li>📘 Centro de Estudios Científicos y Tecnológicos N° 13 "Ricardo Flores Magón" - Técnico en Informática (2020 - 2023)</li>
+    <li>💻 Escuela Superior de Ingeniería Mecánica y Eléctrica, unidad Culhuacán - Ingeniero en Computación (2023 - Actualidad)</li>
+  </ul>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos</h2>
+
+  <div class="proyecto">
+    <h3>🌐 Mi página web en HTML, CSS y JS</h3>
+    <p>Portafolio virtual (Este proyecto es parte de mi portafolio)</p>
+    <a href="https://github.com/Monkeydrich/Portafolio" target="_blank">Ver en GitHub</a>
+  </div>
+
+  <div class="proyecto">
+    <h3>💼 Proyecto en C++</h3>
+    <p>Agencia de viajes con Programación Orientada a Objetos</p>
+    <a href="https://github.com/Monkeydrich/Agencia-de-viajes-POO-" target="_blank">Ver en GitHub</a>
+  </div>
+
+  <div class="proyecto">
+    <h3>⚙️ Proyecto en C# MVC</h3>
+    <p>maqueta para aplicación web CRUD para gestión de productos con SQL Server.</p>
+    <a href="https://github.com/Monkeydrich/Maqueta-de-p-gina-web" target="_blank">Ver en GitHub</a>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div>
+    <img src="foto rich.jpg" alt="Foto de Richard Palma">
+    <div>
+      <p>📧 <strong>richardpalma102005@gmail.com</strong></p>
+      <p>☎️ <strong>(+52) 5537150282</strong></p>
+      <p>🐙 <a href="https://github.com/Monkeydrich" target="_blank">Mi GitHub</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 - Portafolio de Richard Palma.</p>
+  <p>🚫 Prohibida la copia o reproducción sin consentimiento.</p>
+</footer>
+
+<script>
+function mostrar(id) {
+  const secciones = document.querySelectorAll('section');
+  secciones.forEach(sec => {
+    sec.style.display = (sec.id === id) ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
